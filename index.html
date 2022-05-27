@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Cellular Automata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1 class="header-main">Elementary Cellular Automata</h1>
+            <div class="grid-content">
+                <div class="wrapper-info">
+                    <div class="rule-details">
+                        <p>This program displays all 256 rules of Wolfram's Elementary Cellular Automata on a 2D canvas. Each individual Cellular Automaton is based on a 1-dimensional array(grid) filled with cells. A cell has two possible states: 0 (white) or 1 (black).</p>
+                        <p>Each 1-dimensional array represents a generation (starting from  0 instead of 1) within the 2D canvas. To determine the state of the next generation of cells the current we look at 3 cells: the current generation cell and its two neighbors (cells to the left and right). The rule number when converted to a 8 bit binary number will show the 8 possible state configurations of the next generation cell. The rule number and the size of each cell can both be altered.</p>
+                    </div>
+                    <div class="run-rule">
+                        <p class="rule-subheader">Select Rule and Cell Size</p>
+                        <div class="wrapper-rule">
+                            <div class="select-input">
+                                <label for="rule number">Rule 0-255</label>
+                                <input type="number" class="ruleNum numInp" name="rule number" min="0" max="255" value = "0">
+                            </div>
+                            <div class="select-input">
+                                <label for="cell size">Cell Size 1-200</label>
+                                <input type="number" class="cellSize numInp" name="cell size" min="1" max="200" value = "10">
+                            </div>
+                        </div>
+                        <input type="button" value="Run Rule" class="btn">
+                    </div>
+                </div>
+                <div class="wrapper-canvas">
+                    <canvas class="myCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p class="center copyright">2022 © Sarah Nuno</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
