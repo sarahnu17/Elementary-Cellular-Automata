@@ -9,6 +9,9 @@ let arr = [];
 let newArr = [];
 
 function runRule() {
+    // Clear Canvas if already run
+    clearCanvas();
+
     // Grab the cell size
     let cellWidth = document.querySelector('.cellSize').value;
     let arrSize = canvas.width / cellWidth;
@@ -35,6 +38,14 @@ function runRule() {
     
 }
 
+// Will clear the canvas and set the starting variables to empty once again
+function clearCanvas(){
+    c.clearRect(0, 0, canvas.width, canvas.height);
+    arr.length = 0;
+    newArr.length = 0;
+    generation = 0;
+}
+
 // will initialize the first row - generation 0
 function initialRow(arrSize) {
     for (let i = 0; i < arrSize; i++) {
@@ -45,7 +56,7 @@ function initialRow(arrSize) {
     return arr;
 }
 
-// will the fill the cells with correct color
+// will fill the cells with correct color
 function fillState(cellWidth) {
     for (let i = 0; i < arr.length; i++) {
         if(arr[i] == 1) c.fillStyle = 'black';
