@@ -1,4 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(90%, 80em);
+    margin: 0 auto;
+}
+
+section {
+    padding: 3em 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.header-main {
+    padding-bottom: 1.5em;
+}
+
+.wrapper-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding-bottom: 3em;
+}
+
+.rule-details p {
+    padding-bottom: 0.5em;
+    line-height: 1.5em;
+}
+
+.rule-subheader {
+    font-weight: 600;
+}
+
+.wrapper-rule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5em 0;
+}
+
+.select-input {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8em;
+    align-items: center;
+}
+
+.numInp {
+    padding: 0.3em;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background: rgb(55, 55, 55);
+}
+
+.wrapper-canvas {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 .myCanvas {
     border: 1px solid #000;
+}
+
+footer {
+    padding-bottom: 0.75em;
+}
+
+.copyright {
+    font-size: 0.95rem;
+}
+
+@media (min-width: 55em){
+
+    body {
+        font-size: 1.05em;
+    }
+
+    section {
+        padding: 3.5em 0 4.5em;
+    }
+
+    .wrapper-info {
+        padding-bottom: 0;
+    }
+
+    .grid-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 3em 0;
+        column-gap: 1.5em;
+    }
 }
